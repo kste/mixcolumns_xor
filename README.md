@@ -41,22 +41,22 @@ The tables below summarize the circuit depth (critical path length in the XOR DA
 | Dataset | Circuits | XOR Gates | Min Depth | Mean Depth | Max Depth | Avg Output Depth | Max Fan-out |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **`circuits_1.txt`** | 47 | 88 | **6** | 7.64 | 10 | 3.84 – 5.19 | 3 – 5 |
-| **`circuits_2.txt`** | 1042 | 88 | **6** | 8.79 | 12 | 3.84 – 5.38 | 3 – 5 |
-| **Combined** | 1089 | 88 | **6** | 8.74 | 12 | 3.84 – 5.38 | 3 – 5 |
-| **Unique Classes** | 302 | 88 | **6** | 8.76 | 12 | 3.84 – 5.38 | 3 – 5 |
+| **`circuits_2.txt`** | 1973 | 88 | **6** | 8.79 | 12 | 3.84 – 5.50 | 3 – 5 |
+| **Combined** | 2020 | 88 | **6** | 8.77 | 12 | 3.84 – 5.50 | 3 – 5 |
+| **Unique Classes** | 590 | 88 | **6** | 8.68 | 12 | 3.84 – 5.50 | 3 – 5 |
 
 ### Circuit Depth Distribution
 
 | Depth | `circuits_1.txt` | `circuits_2.txt` | Combined Total | Unique Classes |
 | :---: | :---: | :---: | :---: | :---: |
-| **6** | 5 | 10 | 15 | 9 |
-| **7** | 17 | 70 | 87 | 30 |
-| **8** | 17 | 68 | 85 | 41 |
-| **9** | 6 | 884 | 890 | 216 |
-| **10** | 2 | 6 | 8 | 3 |
-| **11** | 0 | 2 | 2 | 2 |
-| **12** | 0 | 2 | 2 | 1 |
-| **Total** | **47** | **1042** | **1089** | **302** |
+| **6** | 5 | 16 | 21 | 12 |
+| **7** | 17 | 129 | 146 | 47 |
+| **8** | 17 | 132 | 149 | 78 |
+| **9** | 6 | 1675 | 1681 | 440 |
+| **10** | 2 | 14 | 16 | 7 |
+| **11** | 0 | 4 | 4 | 4 |
+| **12** | 0 | 3 | 3 | 2 |
+| **Total** | **47** | **1973** | **2020** | **590** |
 
 ---
 
@@ -82,10 +82,10 @@ Testing graph isomorphism directly is computationally heavy, but for pure XOR li
 | File | Total Lines | Valid MixColumns | Unique Isomorphism Classes | Largest Equivalence Class |
 | :--- | :---: | :---: | :---: | :---: |
 | **`circuits_1.txt`** | 47 | 47 | **47** | 1 instance |
-| **`circuits_2.txt`** | 1100 | 1042 | **288** | 474 instances |
-| **Combined** | 1147 | 1089 | **302** | 475 instances |
+| **`circuits_2.txt`** | 2219 | 1973 | **580** | 815 instances |
+| **Combined** | 2266 | 2020 | **590** | 816 instances |
 
-*(33 isomorphism classes are shared between `circuits_1.txt` and `circuits_2.txt`)*
+*(37 isomorphism classes are shared between `circuits_1.txt` and `circuits_2.txt`)*
 
 ---
 
@@ -145,5 +145,5 @@ print(f"MixColumns output wires: {output_wires}")
 
 - **`verify_circuits.py`**: Verification, metric calculation, isomorphism grouping, and deduplication tool.
 - **`circuits_1.txt`**: 47 88-XOR circuits for AES MixColumns (47 pairwise distinct isomorphism classes).
-- **`circuits_2.txt`**: 1100 SLP circuits for AES MixColumns (288 unique isomorphism classes among valid circuits).
+- **`circuits_2.txt`**: 2219 SLP circuits for AES MixColumns (580 unique isomorphism classes among valid circuits).
 - **`LICENSE`**: Repository license.
