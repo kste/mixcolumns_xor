@@ -343,7 +343,7 @@ def main():
     parser.add_argument(
         "files",
         nargs="*",
-        help="Circuit files to verify (default: circuits_1.txt circuits_2.txt)",
+        help="Circuit files to verify (default: circuits_1.txt circuits_2.txt circuits_3.txt circuits_depth5.txt)",
     )
     parser.add_argument(
         "-v", "--verbose",
@@ -403,7 +403,7 @@ def main():
     files_to_check = args.files
     if not files_to_check:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        default_files = ["circuits_1.txt", "circuits_2.txt"]
+        default_files = ["circuits_1.txt", "circuits_2.txt", "circuits_3.txt", "circuits_depth5.txt"]
         files_to_check = []
         for df in default_files:
             if os.path.exists(df):
