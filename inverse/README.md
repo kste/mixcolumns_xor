@@ -42,14 +42,14 @@ The tables below summarize the circuit depth (critical path length in the XOR DA
 
 | Dataset | Circuits | XOR Gates | Min Depth | Mean Depth | Max Depth | Avg Output Depth | Max Fan-out |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`circuits_88.txt`** | 500 | 88 | **33** | 33.77 | 34 | 21.16 – 21.81 | 4 |
+| **`circuits_88.txt`** | 500 | 88 | **33** | 33.61 | 34 | 21.16 – 21.81 | 4 |
 
 ### Circuit Depth Distribution
 
 | Depth | `circuits_88.txt` | Unique Classes |
 | :---: | :---: | :---: |
-| **33** | 116 | 116 |
-| **34** | 384 | 384 |
+| **33** | 194 | 194 |
+| **34** | 306 | 306 |
 | **Total** | **500** | **500** |
 
 ---
@@ -75,7 +75,7 @@ Testing graph isomorphism directly is computationally heavy, but for pure XOR li
 | :--- | :---: | :---: | :---: | :---: |
 | **`circuits_88.txt`** | 500 | 500 | **500** | 1 instance |
 
-*(All 500 circuits are 100% pairwise non-isomorphic, each defining a distinct algebraic signature set over $\mathbb{F}_2^{32}$.)*
+*(All 500 circuits are 100% pairwise non-isomorphic and belong to 500 distinct $\mathbb{Z}_4$ rotational orbits—no two circuits are cyclic byte rotations of each other.)*
 
 ---
 
