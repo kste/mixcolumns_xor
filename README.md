@@ -179,5 +179,5 @@ print(f"MixColumns output wires: {output_wires}")
 - **`circuits_2.txt`**: 2219 SLP circuits for AES MixColumns (580 unique isomorphism classes among valid circuits).
 - **`circuits_3.txt`**: 16,872 additional pairwise non-isomorphic 88-XOR circuits (depths 5–12), expanding the repository total to 17,462 unique isomorphism classes.
 - **`circuits_depth5.txt`**: The 46 optimal depth-5 88-XOR circuits (pairwise non-isomorphic).
-- **`inverse/`**: 500 pairwise non-isomorphic 88-XOR circuits, standalone verification script, and technical analysis for AES Inverse MixColumns.
+- **`inverse/`**: 743 pairwise non-isomorphic 88-XOR circuits (depths 27–34), standalone verification script, and technical analysis for AES Inverse MixColumns.
 - **`LICENSE`**: Repository license.

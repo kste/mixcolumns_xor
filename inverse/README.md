@@ -42,15 +42,17 @@ The tables below summarize the circuit depth (critical path length in the XOR DA
 
 | Dataset | Circuits | XOR Gates | Min Depth | Mean Depth | Max Depth | Avg Output Depth | Max Fan-out |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`circuits_88.txt`** | 500 | 88 | **33** | 33.61 | 34 | 21.16 – 21.81 | 4 |
+| **`circuits_88.txt`** | 743 | 88 | **27** | 31.67 | 34 | 15.91 – 21.81 | 4 |
 
 ### Circuit Depth Distribution
 
 | Depth | `circuits_88.txt` | Unique Classes |
 | :---: | :---: | :---: |
+| **27** | 81 | 81 |
+| **28** | 162 | 162 |
 | **33** | 194 | 194 |
 | **34** | 306 | 306 |
-| **Total** | **500** | **500** |
+| **Total** | **743** | **743** |
 
 ---
 
@@ -73,9 +75,9 @@ Testing graph isomorphism directly is computationally heavy, but for pure XOR li
 
 | File | Total Lines | Valid InvMixColumns | Unique Isomorphism Classes | Largest Equivalence Class |
 | :--- | :---: | :---: | :---: | :---: |
-| **`circuits_88.txt`** | 500 | 500 | **500** | 1 instance |
+| **`circuits_88.txt`** | 743 | 743 | **743** | 1 instance |
 
-*(All 500 circuits are 100% pairwise non-isomorphic and belong to 500 distinct $\mathbb{Z}_4$ rotational orbits—no two circuits are cyclic byte rotations of each other.)*
+*(All 743 circuits are 100% pairwise non-isomorphic and belong to 743 distinct $\mathbb{Z}_4$ rotational orbits—no two circuits are cyclic byte rotations of each other.)*
 
 ---
 
@@ -148,8 +150,8 @@ python3 verify_inverse.py circuits_88.txt -i -t
 ### Metrics Reported
 
 - **XOR Gate Count:** Total gates in the circuit (88).
-- **Circuit Depth:** Maximum critical path depth from inputs to any gate (33–34).
-- **Target Depth:** Min, mean, and max depth across the 32 output wires (mean 21.67).
+- **Circuit Depth:** Maximum critical path depth from inputs to any gate (27–34).
+- **Target Depth:** Min, mean, and max depth across the 32 output wires (15.91–21.81, mean 19.84).
 - **Max Wire Fan-out:** Maximum number of times an intermediate wire is reused (4).
 - **Unique Isomorphism Classes:** Count of distinct algebraic signature sets across the file.
 
