@@ -36,13 +36,13 @@ Every circuit in [`circuits_88.txt`](circuits_88.txt) is **pairwise non-isomorph
 
 ## Circuit Depth & Statistics
 
-The tables below summarize the circuit depth (critical path length in the XOR DAG) across all 4,884 valid 88-XOR inverse circuits in [`circuits_88.txt`](circuits_88.txt):
+The tables below summarize the circuit depth (critical path length in the XOR DAG) across all 12,174 valid 88-XOR inverse circuits in [`circuits_88.txt`](circuits_88.txt):
 
 ### Depth Summary Table
 
 | Dataset | Circuits | XOR Gates | Min Depth | Mean Depth | Max Depth | Avg Output Depth | Max Fan-out |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`circuits_88.txt`** | 4884 | 88 | **20** | 23.25 | 34 | 13.72 – 21.81 | 3 – 5 |
+| **`circuits_88.txt`** | 12174 | 88 | **18** | 22.78 | 34 | 12.56 – 21.81 | 3 – 5 |
 
 *(Each of the 4,884 circuits in `circuits_88.txt` is a canonical representative of a distinct $\mathbb{Z}_4$ rotational orbit: 746 original orbits, 1,209 Direct $F \leftrightarrow C$ Bipartite Hypergraph Duality orbits, 90 additional Depth-21 and 355 additional Depth-22 Treewidth-2 Markov-Blanket Grafted orbits, and 594 Depth-20 plus 1,890 additional Depth-21 Dual-Order Associative Tree-Rebalanced orbits. Lines 747–1340 contain all 594 Depth-20 canonical $\mathbb{Z}_4$-orbit circuits.)*
 
@@ -50,18 +50,20 @@ The tables below summarize the circuit depth (critical path length in the XOR DA
 
 | Depth | `circuits_88.txt` | Unique Classes | Avg Output Depth |
 | :---: | :---: | :---: | :---: |
+| **18** | 513 | 513 | 12.56 – 13.31 |
+| **19** | 1674 | 1674 | 12.88 – 13.81 |
 | **20** | 594 | 594 | 13.72 – 14.09 |
 | **21** | 1998 | 1998 | 13.94 – 14.44 |
-| **22** | 464 | 464 | 14.25 – 15.56 |
-| **23** | 400 | 400 | 14.56 – 16.75 |
-| **24** | 532 | 532 | 14.94 – 18.34 |
-| **25** | 43 | 43 | 15.25 – 18.47 |
+| **22** | 707 | 707 | 14.25 – 15.62 |
+| **23** | 1453 | 1453 | 14.56 – 16.75 |
+| **24** | 2557 | 2557 | 14.94 – 18.34 |
+| **25** | 1825 | 1825 | 15.25 – 18.47 |
 | **26** | 34 | 34 | 15.88 – 19.62 |
 | **27** | 157 | 157 | 15.91 – 20.34 |
 | **28** | 162 | 162 | 16.22 – 16.41 |
 | **33** | 194 | 194 | 21.16 – 21.56 |
 | **34** | 306 | 306 | 21.69 – 21.81 |
-| **Total** | **4884** | **4884** | **13.72 – 21.81** |
+| **Total** | **12174** | **12174** | **12.56 – 21.81** |
 
 ---
 
@@ -84,9 +86,9 @@ Testing graph isomorphism directly is computationally heavy, but for pure XOR li
 
 | File | Total Lines | Valid InvMixColumns | Unique Isomorphism Classes | Largest Equivalence Class |
 | :--- | :---: | :---: | :---: | :---: |
-| **`circuits_88.txt`** | 4884 | 4884 | **4884** | 1 instance |
+| **`circuits_88.txt`** | 12174 | 12174 | **12174** | 1 instance |
 
-*(All 4,884 circuits are 100% pairwise non-isomorphic and belong to 4,884 distinct $\mathbb{Z}_4$ rotational orbits—no two circuits are cyclic byte rotations of each other.)*
+*(All 12,174 circuits are 100% pairwise non-isomorphic and belong to 12,174 distinct $\mathbb{Z}_4$ rotational orbits—no two circuits are cyclic byte rotations of each other.)*
 
 ---
 
@@ -110,10 +112,10 @@ python3 verify_inverse.py circuits_88.txt -i -t
 ### Metrics Reported
 
 - **XOR Gate Count:** Total gates in the circuit (88).
-- **Circuit Depth:** Maximum critical path depth from inputs to any gate (20–34, mean 23.25).
-- **Target Depth:** Min, mean, and max average depth across the 32 output wires (13.72–21.81, mean 15.53).
+- **Circuit Depth:** Maximum critical path depth from inputs to any gate (18–34, mean 22.78).
+- **Target Depth:** Min, mean, and max average depth across the 32 output wires (12.56–21.81, mean 15.21).
 - **Max Wire Fan-out:** Maximum number of times an intermediate wire is reused (3–5).
-- **Unique Isomorphism Classes:** Count of distinct algebraic signature sets across the file (4,884).
+- **Unique Isomorphism Classes:** Count of distinct algebraic signature sets across the file (12,174).
 
 ---
 
